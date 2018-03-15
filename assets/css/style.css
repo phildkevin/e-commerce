@@ -1,0 +1,180 @@
+body {
+  padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+.pricing{
+  color:#fff;
+  width: auto;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.price-tag{
+  background-color: #F3A530;
+  padding-top: 1px;
+  padding: 10px;
+  box-shadow: #777 -1px 1px 3px;
+}
+
+.cart{
+  position: fixed;
+  z-index: 999;
+  bottom: 0px;
+  right: 20px;
+  background-color: #F3A530;
+  color: #fff;
+  padding: 10px;
+  min-width: 70px;
+  height: auto;
+}
+
+.cart-shop{
+  font-size: 30px;
+}
+
+.badge{
+  font-size: 12px !important;
+  background-color: red !important;
+  border-radius: 50%;
+  bottom: 27px;
+  right: 15px;
+  border: #F3A530 1px solid; 
+  position: absolute;
+}
+
+.admin-login{
+	background-image: url(../../assets/images/statesman.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.card-header, .card-footer, .card-body{
+	border-radius: 0px;
+}
+
+.card {
+  height: 100%;
+	border-radius: 0px;
+}
+
+.hideIt{
+	display: none;
+}
+
+.btnLogout{
+	position: fixed;
+	z-index: 999;
+	bottom: -80px;
+	right: -100px;
+	height: 200px;
+	width: 200px;
+	transform: skewX(-45deg);
+}
+
+.btn-tri{
+	transform: skewX(45deg);
+	padding-right: 50px;
+	padding-bottom: 70px;
+	font-size: 30px;
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="number"], #gender {
+	border: none;
+	box-shadow: none;
+	border-radius: 0px;
+	border-bottom: #F3A530 2px solid;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="number"]:focus,
+input[type="text"]:hover, input[type="password"]:hover, input[type="email"]:hover, input[type="number"]:hover{
+	box-shadow: none;
+	border-color: #367ABD;
+	transition: all .7s ease;
+}
+
+.themeBtn{
+	border-radius: 0px;
+	box-shadow: #999 2px 2px 5px 1px;
+}
+
+.noBord{
+	border-radius: 0px;
+}
+
+.themeBg{
+	background-color: #F3A530 !important;
+}
+
+.themeColor{
+	color: #F3A530 !important;
+}
+
+.themeBorder{
+	border: #F3A530 1px solid;
+}
+
+.textW{
+	color: #fff !important;
+}
+
+.titleBox{
+	background-color: #F3A530;
+	min-height: 48px;
+}
+
+.titleBox2{
+	background-color: #367ABD;
+	padding: 10px;
+	transform: skewX(50deg);
+	margin-left: -60px;
+	box-shadow: #333 2px -2px 2px 1px;
+	display: none;
+}
+
+.titleCont{
+	font-size: 20px;
+	transform: skewX(-50deg);
+}
+
+.btnBack:hover{
+	text-shadow: #666 1px 1px 2px;
+}
+
+#user-account img{
+	border: #999 1px solid;
+}
+
+/* FOOTER */
+
+.footer{
+	position: fixed;
+	z-index: 999;
+	bottom: 0px;
+	width: 100%;
+}
+
+.footerBg{
+	background-color: #F3A530;
+	margin-right: -50px;
+}
+
+.footer2{
+	background-color: #367ABD;
+	padding: 5px;
+	transform: skewX(50deg);
+	box-shadow: #333 -2px 2px 2px 1px;
+	display: none;
+}
+
+.titleFooter{
+	font-size: 14px;
+	transform: skewX(-50deg);
+}
+
+/* FOOTER END */
