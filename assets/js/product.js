@@ -21,6 +21,7 @@ $(function(){
                    "<th>Product Price</th>" +
                    "<th>Product Stock</th>" +
                    "<th>Action</th>" +
+                   "<th>Product Description</th>" +
                    "</tr>" +
                    "</thead>" +
                    "<tbody>";
@@ -37,6 +38,7 @@ $(function(){
                     "<button class=\"btn btn-warning btnEditProduct btn-sm themeBtn\" data-toggle=\"popover\" data-content=\"Update Account\" data-id=\""+data[i].product_id+"\"><i class=\"fa fa-edit\"></i></button> " +
                     "<button class=\"btn btn-danger btnDeleteProduct btn-sm themeBtn\" data-toggle=\"popover\" data-content=\"Delete Account\" data-id=\""+data[i].product_id+"\"><i class=\"fa fa-trash\"></i></button> " +
                     "</td>" +
+                    "<td>"+data[i].product_desc+"</td>" +
                     "</tr>";
           }
         }
@@ -88,6 +90,7 @@ $(function(){
         if (data != null) {
           $("#product_code").val(data.product_code);
           $("#product_name").val(data.product_name);
+          $("#product_desc").val(data.product_desc);
           $("#product_price").val(data.product_price);
           $("#product_stock").val(data.product_stock);
           $("#productID").val(data.product_id);
@@ -135,6 +138,7 @@ $(function(){
   $(document).on('click', '#resetProductBtn', function(){
     $("#product_code").val('');
     $("#product_name").val('');
+    $("#product_desc").val('');
     $("#product_price").val('');
     $("#product_stock").val('');
     $("#productID").val('');
@@ -144,6 +148,7 @@ $(function(){
   $(document).on('click', '#cancel', function(){
     $("#product_code").val('');
     $("#product_name").val('');
+    $("#product_desc").val('');
     $("#product_price").val('');
     $("#product_stock").val('');
     $("#productID").val('');

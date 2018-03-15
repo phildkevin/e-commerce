@@ -25,7 +25,7 @@ $(function(){
                       "<p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>"+
                       "</div>" +
                       "<div class=\"card-footer\">" +
-                      "<a href=\"#\" class=\"btn btn-primary themeBtn\">Add to Cart</a>" +
+                      "<a href=\"#\" class=\"btn btn-primary themeBtn itemBtn\" data-id = \""+data[i].product_id+"\">Add to Cart</a>" +
                       "</div>" +
                       "</div>" +
                       "</div>";
@@ -38,6 +38,22 @@ $(function(){
     })
   }
 
+
+$(document).on('click', '.itemBtn', function(){
+  var itemID = $(this).attr('data-id');
+
+  $.ajax({
+    url: base_url + 'home/addCart',
+    type: 'POST',
+    data: {'itemID' : itemID},
+    dataType: 'JSON',
+
+    success: function(){
+      swal('success', 'Item Added!', 'success');
+    }
+
+  })
+})
 
 
 });

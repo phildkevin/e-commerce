@@ -12,7 +12,7 @@ class Admin extends CI_Controller {
 		redirect('admin');
 	}
 
-	public function loginProcess(){
+	public function login(){
 
 		$this->load->library('checker');
 
@@ -24,7 +24,7 @@ class Admin extends CI_Controller {
 		$return['status']  = 0;
 
 		$this->form_validation->set_rules('email_login', 'Email', 'required|valid_email');
-		$this->form_validation->set_rules('password_login', 'Password', 'required');
+		$this->form_validation->set_rules('user_password', 'Password', 'required');
 
 		if ($this->form_validation->run() == FALSE){
 			$return['message'] = validation_errors();
@@ -43,7 +43,6 @@ class Admin extends CI_Controller {
 					$return['message'] = "Invalid Account!";
 				}
 		}
-
 
 		echo json_encode($return);
 

@@ -26,12 +26,12 @@ class ProductModel extends CI_Model{
 		}
 
 		public function addProduct($data){
-    	$query = "INSERT INTO tbl_product (product_code, product_name, product_price, product_stock) VALUES(?, ?, ?, ?)";
+    	$query = "INSERT INTO tbl_product (product_code, product_name, product_desc, product_price, product_stock, product_img) VALUES(?, ?, ?, ?, ?, ?)";
     	$this->db->query($query, $data);
     }
 
 		public function editProduct($data){
-    	$query = "UPDATE tbl_product SET product_code = ?, product_name = ?, product_price = ?, product_stock = ? WHERE product_id = ?";
+    	$query = "UPDATE tbl_product SET product_code = ?, product_name = ?, product_desc = ?, product_price = ?, product_stock = ? WHERE product_id = ?";
     	$this->db->query($query, $data);
     }
 

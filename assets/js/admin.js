@@ -6,7 +6,7 @@ $(function(){
    e.preventDefault();
 
    $.ajax({
-     url: base_url + 'admin/loginProcess',
+     url: 'login',
      type: 'POST',
      data: new FormData(this),
      contentType: false,
@@ -23,7 +23,7 @@ $(function(){
 
        }else{
          setTimeout(function (){
-           window.location.href = "accounts";
+           window.location.href = "orders";
          },1000)
        }
 

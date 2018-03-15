@@ -12,6 +12,14 @@ body {
 	box-shadow: #999 2px 2px 5px 1px;
 }
 
+.themeBg{
+	background-color: #F3A530 !important;
+}
+
+.textW{
+	color: #fff !important;
+}
+
 .help-modal .nav>li>a {
     position: relative;
     display: block;

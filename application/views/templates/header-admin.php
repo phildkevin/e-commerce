@@ -33,7 +33,6 @@
 
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav side-nav">
-                <li class="active"><a href="<?= base_url(); ?>admin/dashboard"><i class="fa fa-dashboard"></i> Dashboard</a></li>
                 <li><a href="<?= base_url(); ?>admin/orders"><i class="fa fa-shopping-cart"></i> Orders</a></li>
                 <li><a href="<?= base_url(); ?>admin/products"><i class="fa fa-shopping-bag"></i> Products</a></li>
                 <li>

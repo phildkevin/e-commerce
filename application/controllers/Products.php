@@ -38,10 +38,31 @@ class Products extends CI_Controller {
 
 		$this->load->library('checker');
 
+		$config = array(
+			'upload_path'    => './assets/images/uploads/',
+			'allowed_types'  => 'jpg|png|jpeg',
+			'max_size'       => 5000,
+			'max_width'      => 5000,
+			'max_height'     => 5000,
+		);
+
+		$this->load->library('upload', $config);
+
+		if ( ! $this->upload->do_upload('product_img')){
+						$error = array('error' => $this->upload->display_errors());
+						$return['message'] = $error;
+						$image = "";
+		}else{
+						$data = array('upload_data' => $this->upload->data());
+						$image = $_FILES['product_img']['name'];
+		}
+
 		$product_code    = $this->checker->check($this->input->post("product_code"));
 		$product_name    = $this->checker->check($this->input->post("product_name"));
+		$product_desc    = $this->checker->check($this->input->post("product_desc"));
 		$product_price   = $this->checker->check($this->input->post("product_price"));
 		$product_stock   = $this->checker->check($this->input->post("product_stock"));
+		$product_img     = $this->checker->check($image);
 		$productID       = $this->input->post("productID");
 
 		$return['message'] = "Oops something went wrong!";
@@ -52,6 +73,7 @@ class Products extends CI_Controller {
 		$this->form_validation->set_rules('product_name', 'Product Name', 'required');
 		$this->form_validation->set_rules('product_price', 'Product Price', 'required');
 		$this->form_validation->set_rules('product_stock', 'Product Stock', 'required');
+		$this->form_validation->set_rules('product_img', 'Product Image', 'required');
 
 			if ($this->form_validation->run() == FALSE){
 				$return['message'] =  validation_errors();
@@ -63,13 +85,14 @@ class Products extends CI_Controller {
 				if ($result->num_rows() > 0) {
 					$return['message'] = "Product is already exist!";
 				}else{
-					$data = [$product_code, $product_name, $product_price, $product_stock];
 
 				if (is_numeric($productID)) {
+					$data = [$product_code, $product_name, $product_desc, $product_price, $product_stock];
 					$data[] = $productID;
 					$this->productModel->editProduct($data);
 					$return['message'] = "Product successfully updated!";
 				} else{
+					$data = [$product_code, $product_name, $product_desc, $product_price, $product_stock, $product_img];
 					$this->productModel->addProduct($data);
 					$return['message'] = "Product successfully added!";
 				}
@@ -98,6 +121,9 @@ class Products extends CI_Controller {
 		}
 		echo json_encode($return);
 	}
+
+
+
 
 
 }

@@ -13,6 +13,7 @@
 
 <!-- MODULES -->
   <script type="text/javascript" src="<?= base_url('assets/js/product.js') ?>"></script>
+  <script type="text/javascript" src="<?= base_url('assets/js/order.js') ?>"></script>
   <script type="text/javascript" src="<?= base_url('assets/js/admin.js') ?>"></script>
 
 </html>

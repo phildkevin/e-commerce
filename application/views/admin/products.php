@@ -11,12 +11,20 @@
         <input type="text" id="product_name" name="product_name" class="form-control">
       </div>
       <div class="form-group">
+        <label>Product Description</label>
+        <textarea id="product_desc" name="product_desc" class="form-control" rows="4"></textarea>
+      </div>
+      <div class="form-group">
         <label>Product Price</label>
         <input type="number" id="product_price" name="product_price" class="form-control">
       </div>
       <div class="form-group">
         <label>Product Stock</label>
         <input type="number" id="product_stock" name="product_stock" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Product Image</label>
+        <input type="file" id="product_img" name="product_img" class="form-control">
       </div>
 
       <div align="right">

@@ -4,6 +4,7 @@
 
 <script type="text/javascript" src="<?= base_url('assets/js/jquery.min.js') ?>"></script>
 <script type="text/javascript" src="<?= base_url('assets/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+<script type="text/javascript" src="<?= base_url('assets/js/sweetalert.min.js') ?>"></script>
 <script type="text/javascript" src="<?= base_url('assets/js/admin.js') ?>"></script>
 <input type="hidden" id="base_url" value="<?= base_url() ?>">
 
