@@ -10,7 +10,7 @@
             <div class="input-group mb-3" style="width:300px;">
               <input type="search" class="form-control" style="width:200px" placeholder="Search Product Here. . ." aria-describedby="basic-addon2">
               <div class="input-group-append">
-                <button type="submit" class="btn btn-outline-secondary themeBg textW" type="button"><span class="fa fa-search"></span></button>
+                <button type="submit" class="btn btn-outline-secondary themeBg textW" style="border:#bbb 2px solid" type="button"><span class="fa fa-search"></span></button>
               </div>
             </div>
           </form>

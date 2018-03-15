@@ -35,13 +35,7 @@
             <ul class="nav navbar-nav side-nav">
                 <li><a href="<?= base_url(); ?>admin/orders"><i class="fa fa-shopping-cart"></i> Orders</a></li>
                 <li><a href="<?= base_url(); ?>admin/products"><i class="fa fa-shopping-bag"></i> Products</a></li>
-                <li>
-                    <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-file-o"></i> Reports <i class="fa fa-fw fa-caret-down"></i></a>
-                    <ul id="demo" class="collapse">
-                        <li><a href="product-report.php"><i class="fa fa-table"></i> Performance Indicator</a></li>
-                        <li><a href="admin-completion.php"><i class="fa fa-file-text"></i> Grade Correction Form</a></li>
-                    </ul>
-                </li>
+                <li><a href="<?= base_url(); ?>admin/reports"><i class="fa fa-file"></i> Reports</a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
