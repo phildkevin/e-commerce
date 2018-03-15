@@ -7,9 +7,13 @@ class Orders extends CI_Controller {
     $data['title']  = "Orders";
     $data['icon']   = "fa fa-shopping-cart";
 
-		$this->load->view('templates/header-admin', $data);
-		$this->load->view('admin/orders');
-		$this->load->view('templates/footer-admin');
+		if(!isset($this->session->userdata['email_login'])){
+			redirect('admin');
+		}else{
+			$this->load->view('templates/header-admin', $data);
+			$this->load->view('admin/orders');
+			$this->load->view('templates/footer-admin');
+		}
 
 	}
 

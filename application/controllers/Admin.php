@@ -8,7 +8,7 @@ class Admin extends CI_Controller {
 	}
 
 	public function logout(){
-		$this->session->unset_userdata('user_id');
+		$this->session->unset_userdata('email_login');
 		redirect('admin');
 	}
 

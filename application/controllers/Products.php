@@ -7,9 +7,13 @@ class Products extends CI_Controller {
     $data['title']  = "Products";
     $data['icon']   = "fa fa-shopping-bag";
 
-		$this->load->view('templates/header-admin', $data);
-		$this->load->view('admin/products');
-		$this->load->view('templates/footer-admin');
+		if(!isset($this->session->userdata['email_login'])){
+			redirect('admin');
+		}else{
+			$this->load->view('templates/header-admin', $data);
+			$this->load->view('admin/products');
+			$this->load->view('templates/footer-admin');
+		}
 
 	}
 
