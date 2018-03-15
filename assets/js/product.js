@@ -27,6 +27,7 @@ $(function(){
                    "<tbody>";
         if (data != null) {
           for (var i = 0; i < data.length; i++) {
+            if(data[i].stock != "" || data[i].stock != 0){
             html += "<tr>" +
                     "<td><img src=\""+base_url+"assets/images/uploads/"+data[i].product_img+"\" class=\"img-responsive\" style=\"width:70px;height:70px\"></td>" +
                     "<td>"+data[i].product_code+"</td>" +
@@ -40,6 +41,7 @@ $(function(){
                     "</td>" +
                     "<td>"+data[i].product_desc+"</td>" +
                     "</tr>";
+                  }
           }
         }
            html += "</tbody>" +

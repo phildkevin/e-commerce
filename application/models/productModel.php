@@ -40,6 +40,11 @@ class ProductModel extends CI_Model{
 			return $this->db->query($query, $productID);
 		}
 
+		public function getItems(){
+			$query = "SELECT * FROM tbl_product WHERE product_stock != 0";
+			return $this->db->query($query);
+		}
+
 
 }
 

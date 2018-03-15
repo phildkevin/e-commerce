@@ -6,7 +6,7 @@ $(function(){
    e.preventDefault();
 
    $.ajax({
-     url: 'login',
+     url: 'admin/login',
      type: 'POST',
      data: new FormData(this),
      contentType: false,
@@ -23,7 +23,7 @@ $(function(){
 
        }else{
          setTimeout(function (){
-           window.location.href = "orders";
+           window.location.href = "admin/orders";
          },1000)
        }
 

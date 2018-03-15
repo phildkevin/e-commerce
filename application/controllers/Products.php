@@ -13,6 +13,16 @@ class Products extends CI_Controller {
 
 	}
 
+	public function getItems(){
+		$data = null;
+		$this->load->model('productModel');
+		$result = $this->productModel->getItems();
+		if ($result->num_rows() > 0) {
+			$data = $result->result_array();
+		}
+		echo json_encode($data);
+	}
+
   public function getProducts(){
 		$data = null;
 		$this->load->model('productModel');
@@ -73,7 +83,6 @@ class Products extends CI_Controller {
 		$this->form_validation->set_rules('product_name', 'Product Name', 'required');
 		$this->form_validation->set_rules('product_price', 'Product Price', 'required');
 		$this->form_validation->set_rules('product_stock', 'Product Stock', 'required');
-		$this->form_validation->set_rules('product_img', 'Product Image', 'required');
 
 			if ($this->form_validation->run() == FALSE){
 				$return['message'] =  validation_errors();

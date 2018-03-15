@@ -8,7 +8,7 @@ $(function(){
   function getItems(){
 
     $.ajax({
-      url :        base_url + 'products/getProducts',
+      url :        base_url + 'products/getItems',
       dataType:    'JSON',
 
       success: function(data){
@@ -22,10 +22,10 @@ $(function(){
                       "<img class=\"card-img-top\" src=\"assets/images/uploads/"+data[i].product_img+"\" alt=\"\">" +
                       "<div class=\"card-body\">" +
                       "<h4 class=\"card-title\">"+data[i].product_name+"</h4>" +
-                      "<p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>"+
+                      "<p class=\"card-text\">"+data[i].product_desc+"</p>"+
                       "</div>" +
                       "<div class=\"card-footer\">" +
-                      "<a href=\"#\" class=\"btn btn-primary themeBtn itemBtn\" data-id = \""+data[i].product_id+"\">Add to Cart</a>" +
+                      "<button class=\"btn btn-primary themeBtn itemBtn\" data-id = \""+data[i].product_id+"\">Add to Cart</button>" +
                       "</div>" +
                       "</div>" +
                       "</div>";
