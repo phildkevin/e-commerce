@@ -35,7 +35,6 @@ $(function(){
                     "<td>"+data[i].product_price+"</td>" +
                     "<td>"+data[i].product_stock+"</td>" +
                     "<td class=\"text-center\">" +
-                    "<button class=\"btn btn-info btnView btn-sm themeBtn\" data-toggle=\"popover\" data-content=\"View Account\" data-id=\""+data[ i].product_id+"\"><i class=\"fa fa-eye\"></i></button> " +
                     "<button class=\"btn btn-warning btnEditProduct btn-sm themeBtn\" data-toggle=\"popover\" data-content=\"Update Account\" data-id=\""+data[i].product_id+"\"><i class=\"fa fa-edit\"></i></button> " +
                     "<button class=\"btn btn-danger btnDeleteProduct btn-sm themeBtn\" data-toggle=\"popover\" data-content=\"Delete Account\" data-id=\""+data[i].product_id+"\"><i class=\"fa fa-trash\"></i></button> " +
                     "</td>" +
